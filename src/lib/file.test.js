@@ -1,5 +1,7 @@
 import { describe, expect, it, jest } from '@jest/globals';
+import * as path from 'path';
 import { direxists, readFile, readFilesFromDir } from './file';
+
 
 // Hér ættum við að nota mock, en þau eru erfið með Jest + ESM
 // https://jestjs.io/docs/ecmascript-modules#module-mocking-in-esm
@@ -43,7 +45,7 @@ describe('file', () => {
 
     it('should return array of known files for dir that does exist', async () => {
       const result = await readFilesFromDir(testDir);
-      expect(result).toEqual(['src/test/data/1', 'src/test/data/2']);
+      expect(result).toEqual([path.normalize(`${testDir}/1`), path.normalize(`${testDir}/2`)]);
     });
   });
 
