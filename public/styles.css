@@ -1,6 +1,6 @@
 :root {
   --font-base-size: 16px;
-  --font-base-family: Helvetica, Arial, sans-serif;
+  --font-base-family: helvetica, arial, sans-serif;
   --max-width: 56rem;
   --spacing: 1rem;
   --color-border: #ddd;
@@ -37,7 +37,6 @@ p {
 table {
   border-collapse: separate;
   border-spacing: 0 10px;
-
   overflow-y: auto;
   width: 100%;
   max-width: 100%;
@@ -46,14 +45,6 @@ table {
 .teams {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-.teams td:first-child {
-  width: 90%;
-}
-
-.teams td:last-child {
-  width: 10%;
 }
 
 table td {
@@ -70,14 +61,34 @@ table th {
   width: auto;
 }
 
-.date-head {
-  text-align: left;
-  padding-left: 25px;
+.small-screen {
+  display: none;
+}
+
+.small-screen td {
+  border: none;
+}
+
+.small-screen span {
+  font-weight: bold;
 }
 
 .team td, .team th{
   text-align: left;
   font-size: 20px;
+}
+
+.teams td:first-child {
+  width: 90%;
+}
+
+.teams td:last-child {
+  width: 10%;
+}
+
+.date-head {
+  text-align: left;
+  padding-left: 25px;
 }
 
 .no-border {
@@ -109,18 +120,6 @@ table th {
   padding: 0;
   padding-right: -10px;
   margin-right: -10px;
-}
-
-.small-screen {
-  display: none;
-}
-
-.small-screen td {
-  border: none;
-}
-
-.small-screen span {
-  font-weight: bold;
 }
 
 @media (max-width: 605px) {
