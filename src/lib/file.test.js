@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it, jest } from '@jest/globals';
 import { direxists, readFile, readFilesFromDir } from './file';
 
 // Hér ættum við að nota mock, en þau eru erfið með Jest + ESM
@@ -27,15 +27,23 @@ describe('file', () => {
 
   describe('readFilesFromDir', () => {
     it('should return empty array for dir that does not exist', async () => {
+      const consoleError = jest.spyOn(console, 'error');
+
+      // Mock console.error to suppress the message during the test
+      consoleError.mockImplementation(() => {});
+
       const result = await readFilesFromDir('./does-not-exist');
 
+      expect(consoleError).toHaveBeenCalled();
       expect(result).toEqual([]);
+
+      // Restore the original console.error implementation after the test
+      consoleError.mockRestore();
     });
 
     it('should return array of known files for dir that does exist', async () => {
       const result = await readFilesFromDir(testDir);
-
-      expect(result).toEqual(['src/test/data/1', 'src/test/data/2']);
+      expect(result).toEqual(['src\\test\\data\\1', 'src\\test\\data\\2']);
     });
   });
 

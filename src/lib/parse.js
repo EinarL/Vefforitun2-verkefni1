@@ -1,3 +1,3 @@
-export function parseTeamsJson(data) {
+export function parseJson(data) {
   return JSON.parse(data);
 }

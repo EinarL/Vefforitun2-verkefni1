@@ -47,11 +47,6 @@ export async function readFilesFromDir(dir) {
     const info = await stat(path);
     // console.log('info', info);
 
-    if (info.isDirectory()) {
-      // console.log('is dir!');
-      return null;
-    }
-
     if (info.isFile()) {
       // console.log('is file!');
       return path;

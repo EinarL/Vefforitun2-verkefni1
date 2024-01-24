@@ -24,12 +24,13 @@ module.exports = {
     'max-len': [
       'warn',
       {
-        code: 100,
+        code: 160,
         ignoreUrls: true,
         ignoreComments: true,
         ignoreTemplateLiterals: true,
       },
     ],
     'no-continue': 0,
+    'no-plusplus': 0
   },
 };
