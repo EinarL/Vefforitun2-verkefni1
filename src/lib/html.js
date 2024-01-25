@@ -28,7 +28,7 @@ export function template(content) {
   <head>
     <meta charset="utf-8">
     <title>Knattspyrnudeildin</title>
-    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="/public/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>${content}</body>
