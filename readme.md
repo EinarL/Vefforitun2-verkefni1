@@ -1,4 +1,4 @@
 # Vefforritun 2 2024, verkefni 1
 ## Nemandi: Einar Logi Pétursson, elp26@hi.is
 
-Slóð á netlify: 
+Slóð á netlify: https://vfor2verkefni1einar.netlify.app/
